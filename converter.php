@@ -4,11 +4,11 @@ $entrada = $_POST['entrada'];
 
 if (empty($entrada)){
 
-    echo "<h3>ingrese un valor de entrada</h3>";
+    echo "<h1>No haz ingresado ningun valor</h1>";
 
 } else {
     if ( $tipoConversion != 4 && $entrada < 0 ){
-        echo "<h3>ingresa un valor poitivo, por favor</h3>";
+        echo "<h1>Ingresa un valor positivo, por favor</h1>";
         $textoBoton = "Regresar";
     }else{
         switch ( $tipoConversion ){
@@ -52,7 +52,7 @@ if (empty($entrada)){
                 break;
         }
 
-        echo "<h3>" .$entrada. " " .$unidad. "equivale a <b>" .round($resultado,3). " " .$newunidad. "</b> </h3>";
+        echo "<h1>" .$entrada. " " .$unidad. "equivale a <b>" .round($resultado,3). " " .$newunidad. "</b> </h1>";
     }
 
 }
